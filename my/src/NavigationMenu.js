@@ -60,11 +60,12 @@ function NavigationMenu({ items }) {
   };
 
   return (
-    <nav ref={menuRef}>
+    <nav ref={menuRef} className={isMobile ? "mobile-menu" : "desktop-menu"}>
       <ul>
         {items.slice(0, visibleItems).map((item) => (
           <li key={item.id}>
             <a href={`#${item.id}`}>{item.name}</a>
+            {!isMobile && <span className="item-description">{item.description}</span>}
           </li>
         ))}
       </ul>
@@ -73,3 +74,4 @@ function NavigationMenu({ items }) {
 }
 
 export default NavigationMenu;
+
