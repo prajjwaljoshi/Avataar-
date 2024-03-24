@@ -2,17 +2,20 @@
   text-align: center;
 }
 
+/* Logo styles */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Animation for the logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header styles */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,10 +27,12 @@
   color: white;
 }
 
+/* Link styles */
 .App-link {
   color: #61dafb;
 }
 
+/* Keyframes for logo spinning animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,86 +41,82 @@
     transform: rotate(360deg);
   }
 }
+
+/* Navigation styles */
 nav {
-  display: flex; /* Arrange items horizontally */
-  justify-content: space-between; /* Space items evenly */
-  background-color: #f0f0f0; /* Light background */
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
   padding: 1rem;
 }
 
-li {
-  list-style: none; /* Remove default bullet points */
-  margin: 0 1rem; /* Add some spacing between items */
-}
-
-a {
-  text-decoration: none; /* Remove underline from links */
-  color: black; /* Text color */
-  font-weight: bold; /* Make items prominent */
-}
-
-.more-section {
-  display: flex; /* Arrange button and dropdown horizontally */
-  align-items: center; /* Align vertically */
-  margin-top: 1rem; /* Add some spacing after main menu items */
-}
-
-.more-section button {
-  background-color: transparent; /* Remove default button background */
-  border: none; /* Remove default border */
-  cursor: pointer; /* Indicate clickable element */
-  color: #333; /* Text color */
-}
-
-.more-dropdown {
-  display: none; /* Initially hide the dropdown */
-  position: absolute; /* Position dropdown below the button */
-  background-color: #f0f0f0; /* Light background color */
-  padding: 1rem; /* Add some padding */
-  list-style: none; /* Remove default bullet points */
-  margin: 0; /* Remove default margin */
-  z-index: 1; /* Ensure dropdown stays above other content (optional) */
-}
-
-.more-section.open .more-dropdown {
-  display: block; /* Show the dropdown when the section is open */
-}
-
-/* Base styles for menu */
-nav {
-  display: flex; /* Arrange items horizontally */
-  justify-content: space-between; /* Space items evenly */
-  padding: 1rem;
-}
-
+/* List item styles */
 li {
   list-style: none;
   margin: 0 1rem;
 }
 
-/* Styles for smaller screens (adjust breakpoint as needed) */
+/* Anchor styles */
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* "More" section styles */
+.more-section {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Button styles within the "More" section */
+.more-section button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Dropdown menu styles */
+.more-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  list-style: none;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Show dropdown when the "More" section is open */
+.more-section.open .more-dropdown {
+  display: block;
+}
+
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   nav {
-    flex-wrap: wrap; /* Wrap menu items if needed */
+    flex-wrap: wrap;
   }
 
+  /* Adjust styles for "More" section on smaller screens */
   .more-section {
-    /* Adjust styles for "More" section on smaller screens */
-    margin-top: 0; /* Remove top margin */
+    margin-top: 0;
   }
 }
 
+/* Carousel item styles */
 .carousel-item img {
-  /* Adjust image width as needed (e.g., 300px) */
   width: 100px;
-  height: 500px; /* Maintain aspect ratio */
-  object-fit: cover; /* Crop to fit while maintaining aspect ratio */
-  display: block; /* Ensure image takes up full width of its container */
-  margin: 0 auto; /* Center image horizontally within carousel item */
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Optional: Center carousel itself horizontally (adjust as needed) */
+/* Optional: Center carousel horizontally */
 .carousel {
   margin: 0 auto;
-  width: 80%; /* Adjust width as desired */
+  width: 80%;
 }
